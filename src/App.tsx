@@ -1,6 +1,6 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
 function App() {
   return (
@@ -10,6 +10,7 @@ function App() {
         <p>
           Edit <code>src/App.tsx</code> and save to reload.
         </p>
+
         <a
           className="App-link"
           href="https://reactjs.org"
@@ -18,6 +19,14 @@ function App() {
         >
           Learn React
         </a>
+
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          src="/videos/Alternate Leg Twist - Dumbbell.mp4"
+        />
       </header>
     </div>
   );
