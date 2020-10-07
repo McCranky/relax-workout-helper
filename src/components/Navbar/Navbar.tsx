@@ -1,5 +1,17 @@
 import React from "react";
-import { Nav, NavbarContainer, NavLogo } from "./Navbar.styled";
+import { FaBars } from "react-icons/fa";
+import { GiMuscleUp } from "react-icons/gi";
+import {
+  MobileIcon,
+  Nav,
+  NavbarContainer,
+  NavBtn,
+  NavBtnLink,
+  NavItem,
+  NavLink,
+  NavLogo,
+  NavMenu,
+} from "./Navbar.styled";
 
 interface Props {}
 
@@ -8,7 +20,27 @@ const Navbar = (props: Props) => {
     <>
       <Nav>
         <NavbarContainer>
-          <NavLogo to="/">Relax</NavLogo>
+          <NavLogo to="/">
+            Relax {"    "}
+            <GiMuscleUp />
+          </NavLogo>
+          <MobileIcon>
+            <FaBars />
+          </MobileIcon>
+          <NavMenu>
+            <NavItem>
+              <NavLink to="/programs">Programs</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/about">About</NavLink>
+            </NavItem>
+            <NavItem>
+              <NavLink to="/signUp">Sign Up</NavLink>
+            </NavItem>
+          </NavMenu>
+          <NavBtn>
+            <NavBtnLink to="/signIn">Sign In</NavBtnLink>
+          </NavBtn>
         </NavbarContainer>
       </Nav>
     </>

@@ -4,7 +4,7 @@ import styled from "styled-components";
 export const Nav = styled.nav`
   background: #d35400;
   height: 80px;
-  margin-top: -80px;
+  /* margin-top: -80px; */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,11 +12,15 @@ export const Nav = styled.nav`
   position: sticky;
   top: 0;
   z-index: 10;
+
+  @media screen and (max-width: 768px) {
+    transition: 0.8s all ease;
+  }
 `;
 
 export const NavbarContainer = styled.div`
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   height: 80px;
   z-index: 1;
   width: 100%;
@@ -34,4 +38,78 @@ export const NavLogo = styled(Link)`
   margin-left: 24px;
   font-weight: bold;
   text-decoration: none;
+`;
+
+export const MobileIcon = styled.div`
+  display: none;
+
+  @media screen and (max-width: 768px) {
+    display: block;
+    color: #fff;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+`;
+
+export const NavMenu = styled.ul`
+  display: flex;
+  align-items: center;
+  list-style: none;
+  text-align: center;
+  margin-right: -22px;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const NavItem = styled.li`
+  height: 80px;
+`;
+
+export const NavLink = styled(Link)`
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  height: 100%;
+  cursor: pointer;
+
+  &.active {
+    border-bottom: 3px solid darken(#d35400, 10);
+  }
+`;
+
+export const NavBtn = styled.nav`
+  display: flex;
+  align-items: center;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
+`;
+
+export const NavBtnLink = styled(Link)`
+  border-radius: 50px;
+  background: #e67e22;
+  white-space: nowrap;
+  padding: 10px 22px;
+  color: #ecf0f1;
+  font-size: 16px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    transition: all 0.2s ease-in-out;
+    background: #ecf0f1;
+    color: #e67e22;
+  }
 `;
