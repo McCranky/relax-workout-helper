@@ -13,9 +13,11 @@ import {
   NavMenu,
 } from "./Navbar.styled";
 
-interface Props {}
+interface Props {
+  onMobileMenu: () => void;
+}
 
-const Navbar = (props: Props) => {
+const Navbar = ({ onMobileMenu, ...props }: Props) => {
   return (
     <>
       <Nav>
@@ -24,7 +26,7 @@ const Navbar = (props: Props) => {
             Relax {"    "}
             <GiMuscleUp />
           </NavLogo>
-          <MobileIcon>
+          <MobileIcon onClick={onMobileMenu}>
             <FaBars />
           </MobileIcon>
           <NavMenu>
