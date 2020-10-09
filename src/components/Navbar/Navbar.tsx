@@ -1,6 +1,6 @@
 import React from "react";
 import { FaBars } from "react-icons/fa";
-import { GiMuscleUp } from "react-icons/gi";
+import { GiMuscleUp, GiMuscleFat } from "react-icons/gi";
 import {
   MobileIcon,
   Nav,
@@ -23,6 +23,7 @@ const Navbar = ({ onMobileMenu, ...props }: Props) => {
       <Nav>
         <NavbarContainer>
           <NavLogo to="/">
+            <GiMuscleFat />
             Relax {"    "}
             <GiMuscleUp />
           </NavLogo>

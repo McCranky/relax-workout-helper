@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 export const Nav = styled.nav`
   background: #d35400;
-  height: 80px;
+  height: 70px;
   /* margin-top: -80px; */
   display: flex;
   justify-content: center;
@@ -21,7 +21,7 @@ export const Nav = styled.nav`
 export const NavbarContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
+  height: 70px;
   z-index: 1;
   width: 100%;
   padding: 0 24px;
