@@ -1,5 +1,4 @@
-import React, { useRef } from "react";
-import VideoPlayer from "../VideoPlayer/VideoPlayer";
+import React from "react";
 import {
   CloseBtn,
   Content,
@@ -12,21 +11,21 @@ import {
 interface Props {
   visible: boolean;
   divRef: React.RefObject<HTMLDivElement>;
+  title: string;
+  children: React.ReactNode;
   onClose: () => void;
 }
 
-const Modal = ({ visible, divRef, onClose, ...props }: Props) => {
-  const refModalWrapper = useRef(null);
-
+const Modal = ({ title, visible, divRef, onClose, children, ...props }: Props) => {
   return (
     <Wrapper visible={visible}>
       <InnerWrapper ref={divRef}>
         <Header>
-          <Title>Video title</Title>
+          <Title>{title}</Title>
           <CloseBtn onClick={onClose} />
         </Header>
         <Content>
-          <VideoPlayer url="/videos/1.mp4" />
+          {children}
         </Content>
       </InnerWrapper>
     </Wrapper>
