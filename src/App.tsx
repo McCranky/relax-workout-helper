@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import Modal from "./components/common/Modal/Modal";
 import VideoPlayer from "./components/common/VideoPlayer/VideoPlayer";
+import ModalLoginForm from "./components/Modals/ModalLoginForm/ModalLoginForm";
 import ModalVideo from "./components/Modals/ModalVideo/ModalVideo";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
@@ -19,7 +20,8 @@ function App() {
     <>
       <Sidebar isOpen={isOpen} onClose={toggleSidebar} />
       <Navbar onMobileMenu={toggleSidebar} />
-      <ModalVideo title="Testing title" url="/videos/1.mp4" visible={showModalVideo} onClose={() => setShowModalVideo(false)}/>
+      {/* <ModalVideo title="Testing title" url="/videos/1.mp4" visible={showModalVideo} onClose={() => setShowModalVideo(false)}/> */}
+      <ModalLoginForm visible={showModalVideo} onClose={() => setShowModalVideo(false)}/>
       <button onClick={() => setShowModalVideo(true)}>Modal</button>
     </>
   );
