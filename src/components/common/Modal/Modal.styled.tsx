@@ -41,7 +41,6 @@ export const Header = styled.div`
   padding: 0 2rem;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1);
   align-items: center;
-  margin: -0.5rem;
 `;
 
 export const Title = styled.h4`
