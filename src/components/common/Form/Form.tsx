@@ -1,17 +1,27 @@
 import React from 'react'
-import { Button, Wrapper } from './Form.styled';
-import Input from './Input';
+import { Left, Right, Wrapper, Image, FormWrapper, InnerWrapper } from './Form.styled';
 
 interface Props {
-    
+    imgUrl?: string;
+    infotext?: string;
+    children: React.ReactNode;
+    onSubmit: () => void;
 }
 
-const Form = (props: Props) => {
+const Form = ({imgUrl, infotext, children, onSubmit, ...props}: Props) => {
     return (
         <Wrapper>
-            <Input name="username" label="Username" type="text"/>
-            <Input name="password" label="Password" type="password"/>
-            <Button>Log in</Button>
+            {infotext && <h3>{infotext}</h3>}
+            <InnerWrapper>
+                {imgUrl && <Left>
+                    <Image src={imgUrl}/>
+                </Left>}
+                <Right>
+                    <FormWrapper onSubmit={onSubmit}>
+                        {children}
+                    </FormWrapper>
+                </Right>
+            </InnerWrapper>
         </Wrapper>
     )
 }

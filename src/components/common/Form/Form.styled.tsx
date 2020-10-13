@@ -1,6 +1,37 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.form`
+export const Wrapper = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+`
+
+export const InnerWrapper = styled.div`
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const Left = styled.div`
+    flex: 1;
+    width: 50%;
+    align-items: center;
+
+    @media screen and (max-width: 570px) {
+        display: none;
+    }
+`
+export const Right = styled.div`
+    flex: 2;
+    width: 50%;
+`
+
+export const FormWrapper = styled.form`
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -12,33 +43,15 @@ export const Wrapper = styled.form`
     padding: 0;
 `
 
-export const InputWrapper = styled.div`
-    display: flex;
-    flex-direction: column;
-    padding: 1rem 1rem;
-    margin: 1rem auto;
+export const Image = styled.img`
+    width: 400px;
+    overflow: hidden;
+    
+    @media screen and (max-width: 990px) {
+    max-width: 250px;
+  }
 `
-export const Label = styled.label`
-    font-size: 14px;
-    font-weight: 700;
-    margin-left: 4px;
-`
-export const InputField = styled.input`
-    width: 140px;
-    height: 24px;
-    outline: none;
-    border: 2px rgba(0,0,0,.2) solid;
-    border-radius: 8px;
-    transition: all .2s linear;
 
-    &:hover{
-        width: 160px;
-    }
-
-    &:focus{
-        border-color: #f39c12;
-    }
-`
 export const Button = styled.button`
     width: 128px;
     height: 32px;

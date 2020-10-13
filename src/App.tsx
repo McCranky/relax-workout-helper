@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import "./App.css";
-import Modal from "./components/common/Modal/Modal";
-import VideoPlayer from "./components/common/VideoPlayer/VideoPlayer";
 import ModalLoginForm from "./components/Modals/ModalLoginForm/ModalLoginForm";
 import ModalVideo from "./components/Modals/ModalVideo/ModalVideo";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Sidebar/Sidebar";
-import { useOnClickOutside } from "./utils/useOnClickOutside";
 
 function App() {
   const [isOpen, setIsOpen] = useState(false);

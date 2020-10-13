@@ -1,5 +1,5 @@
 import React from 'react'
-import { InputField, InputWrapper, Label } from './Form.styled'
+import { Wrapper, InputField, Label } from './Input.styled'
 
 interface Props {
     name: string;
@@ -9,10 +9,10 @@ interface Props {
 
 const Input = ({name, label, type, ...props}: Props) => {
     return (
-        <InputWrapper>
+        <Wrapper>
             <Label htmlFor={name}>{label}</Label>
             <InputField type={type} id={name} name={name} placeholder={name}/>
-        </InputWrapper>
+        </Wrapper>
     )
 }
 
