@@ -18,7 +18,8 @@ export const InputField = styled.input`
     outline: none;
     border: 2px rgba(0,0,0,.2) solid;
     border-radius: 8px;
-    transition: all .2s linear;
+    transition: .2s linear;
+    transition-property: width, border-color;
 
     &:hover{
         width: 160px;

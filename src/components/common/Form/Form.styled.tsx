@@ -64,7 +64,8 @@ export const Button = styled.button`
     border: 2px #d35400 solid;
     border-radius: 10px;
     text-transform: uppercase;
-    transition: all .2s linear;
+    transition: .2s linear;
+    transition-property: color, background-color; 
 
     &:hover{
         background-color: #e67e22;
